@@ -28,7 +28,11 @@ sudo apt install libxcb-xinerama0 libxkbcommon-x11-0 libxcb-cursor0 -y
 
 Após executar os comandos, faça logoff e login novamente e faça o [download do arquivo](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html#:~:text=Download%20QGroundControl.AppImage).
 
+Feito o download, execute o seguinte comando:
 
-
+```shell
+chmod +x ./QGroundControl.AppImage
+./QGroundControl.AppImage
+```
 
 ## BetaFlight
