@@ -4,10 +4,11 @@ Essa configuração é feita considerando o sistema operacional Ubuntu, visto qu
 
 Programas a serem instalados:
 
-* Gazebo
-* ROS2
-* QGroundControl
-* BetaFlight
+- Gazebo
+- ROS2
+- QGroundControl
+- BetaFlight
+- PX4
 
 ## ROS2
 
@@ -33,42 +34,60 @@ source /opt/ros/humble/setup.bash && echo "source /opt/ros/humble/setup.bash" >>
 Para verificar se está funcionando corretamente, abra dois terminais e execute os seguintes comandos.
 
 No terminal 1:
+
 ```shell
 ros2 run demo_nodes_cpp talker
 ```
 
 No terminal 2:
+
 ```shell
 ros2 run demo_nodes_py listener
 ```
 
-No terminal 1 serão enviadas mensagens que devem aparecer no terminal 2. 
+No terminal 1 serão enviadas mensagens que devem aparecer no terminal 2.
+
+## PX4
+
+Também precisamos instalar o PX4 para rodar simulações junto ao Gazebo.
+Para instalar, utilize os seguintes comandos:
+
+```shell
+cd
+git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
+cd PX4-Autopilot/
+make px4_sitl
+```
+
+Para comunicação com o ROS2, é necessário instalar algumas dependências:
+
+```shell
+pip install --user -U empy==3.3.4 pyros-genmsg setuptools
+```
+
+Além dessas, precisamos instalar o Micro XRCE-DDS Agent (**DEVE SER INSTALADO NO COMPANION COMPUTER**):
+
+```shell
+git clone https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
+cd Micro-XRCE-DDS-Agent
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+sudo ldconfig /usr/local/lib/
+```
+
+Para executar o Agent use:
+
+```shell
+MicroXRCEAgent udp4 -p 8888
+```
 
 ## Gazebo
 
-Para instalar o gazebo, primeiro é necessário instalar algumas dependências, com os seguintes comandos:
-
-```shell
-sudo apt-get update
-sudo apt-get install lsb-release wget gnupg
-```
-
-E então instalar o Gazebo Ignition Fortress (Versão compatível com o ROS2 Humble)
-
-```shell
-sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
-
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
-
-sudo apt-get update
-sudo apt-get install ignition-fortress
-```
-
-Para realizar a comunicação entre o ROS2 e o Gazebo precisamos instalar uma outra ferramenta:
-
-```shell
-sudo apt-get install ros-humble-ros-ign-bridge
-```
+O Gazebo já é instalado durante a instalação do PX4
 
 ## QGroundControl
 
