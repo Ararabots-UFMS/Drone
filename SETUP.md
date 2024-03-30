@@ -9,6 +9,7 @@ Programas a serem instalados:
 - QGroundControl
 - BetaFlight
 - PX4
+- Visual Studio Code
 
 ## ROS2
 
@@ -121,4 +122,14 @@ Para instalar, execute:
 
 ```shell
 sudo apt-get install ./betaflight-configurator_10.9.0_amd64.deb
+```
+
+## Visual Studio Code
+
+Faça o download do pacote debian do VS code [neste link](https://code.visualstudio.com/).
+
+E instale com o seguinte comando:
+
+```shell
+sudo apt install ./<file>.deb
 ```
