@@ -9,3 +9,6 @@ https://github.com/SKYnSPACE/AE450
 
 Intelligent Quads Tutorials
 https://github.com/Intelligent-Quads/iq_tutorials/tree/master
+
+PX4-ROS2-Gazebo-YOLOv8 Example
+https://github.com/monemati/PX4-ROS2-Gazebo-YOLOv8/tree/main
