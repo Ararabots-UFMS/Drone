@@ -1,16 +1,16 @@
-# Intro to Gazebo World Modeling
+# Introducao, modelando um mundo no Gazebo
 
-## Video Tutorial at https://youtu.be/gpk8mQhhI4s
+## Tutorial https://youtu.be/gpk8mQhhI4s
 
 
-## Add the Open Gazebo Models Database
+## Adicionar Open Gazebo Models Database
 
-Use git to get a bunch of open source gazebo models from the Open Source Robotics Foundation (OSRF) 
+Varios modelos da Open Source Robotics Foundation (OSRF) 
 
 ```
 git clone https://github.com/osrf/gazebo_models.git
 ```
-Add Models path to the bashrc
+Adicionar Models path para o bashrc
 ```
 echo 'export GAZEBO_MODEL_PATH=~/gazebo_ws/gazebo_models:${GAZEBO_MODEL_PATH}' >> ~/.bashrc
 source ~/.bashrc
@@ -20,7 +20,7 @@ source ~/.bashrc
 
 make a new file in `~/catkin_ws/src/iq_sim/worlds/` called `hills.world`
 
-copy the following lines into the world 
+Copie as seguintes linhas de comando
 
 ```
 <?xml version="1.0" ?>
@@ -151,13 +151,13 @@ copy the following lines into the world
   </world>
 </sdf>
 ```
-The above code is `sdf` code. it is a formatting language specific to Gazebo. The above lines form the basis to our a good gazebo drone simulation. The physics tag above is tailored to best simulate the drone's flight. The next part of the simulation is the `iris` which is our drone. The code inside the iris model tag is the code needed for our camera sensor. We will go over sdf coding in future tutorials.
+O código acima é código sdf. É uma linguagem de formatação específica para o Gazebo. As linhas acima formam a base para uma boa simulação de drone no Gazebo. A tag de física acima é adaptada para simular da melhor forma o voo do drone. A próxima parte da simulação é o iris, que é nosso drone. O código dentro da tag de modelo iris é o código necessário para o nosso sensor de câmera. Abordaremos a codificação SDF em futuros tutoriais.
 
-## Add a Launch File to Facilitate the ROS Plugins 
+## Adicione a Launch File para faciltitar os ROS Plugins 
 
 make a file in `~/catkin_ws/src/iq_sim/launch` called `hills.launch`
 
-then add the following lines
+em seguida adicione as seguintes linhas
 
 ```
 <launch>
