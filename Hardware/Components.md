@@ -1,6 +1,6 @@
 # Flight Controller
 
-  ## Currente equipment: mRo PixRacer R15
+  ## Current equipment: mRo PixRacer R15
       -Value: $149.90
       -User Guide: https://mrobotics.io/docs/mro-pixracer-r15/
       
@@ -47,10 +47,13 @@
           Width: 36mm (1.42”)
           Length: 36mm (1.42”) 
 
+          
+![image](https://github.com/Ararabots-UFMS/Drone/assets/104502725/93b5a700-d942-4206-9f2c-68af42863953)
+
 
 # Brushless Motor 
 
-  ## Currente equipment: RcTimer 5010 360KV 
+  ## Current equipment: RcTimer 5010 360KV 
       -Value: $15.99
 
       -Specifications:
@@ -61,11 +64,14 @@
         Motor Dimension(Dia.*Len): Φ50х26
         Weight(g): 92g
         Cable 40cm
+        
+![image](https://github.com/Ararabots-UFMS/Drone/assets/104502725/b30ffee1-eafa-49cc-be3f-9938e42bcb98)
+
 
 
 # Lipo Baterry 
 
-  ## Currente equipment: Tattu 5200mAh 4S 35C 14.8V
+  ## Current equipment: Tattu 5200mAh 4S 35C 14.8V
       -Value: $62.99
 
       -Specifications:
@@ -73,6 +79,80 @@
         Voltage: 14.8V (4S)
         Discharge Rate: 35C
         Max Burst Discharge Rate: 70C
+        
+![image](https://github.com/Ararabots-UFMS/Drone/assets/104502725/11cc1c7f-ecb4-421e-a154-949db3037926)
+
+
+# Raspiberry Pi
+
+  ## Current equipment : Raspberry Pi 3 Model B
+      -Value: R$ 370,40
+      -Doc: https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#raspberry-pi-3-model-b
+
+      -Specifications:
+        Processador Broadcom BCM2837B0 64bits ARM Cortex-A53 Quad-Core
+        Clock 1.4 GHz
+        Memória RAM: 1GB
+        Adaptador Wifi 802.11 b/g/n/AC 2.4GHz e 5GHz integrado
+        Bluetooth 4.2 BLE integrado
+        Conector de vídeo HDMI
+        4 portas USB 2.0
+        Conector Gigabit Ethernet over USB 2.0 (throughput máximo de 300 Mbps)
+        Alimentação: recomendamos uma fonte DC chaveada 5V 3A
+        Interface para câmera (CSI)
+        Interface para display (DSI)
+        Slot para cartão microSD
+        Conector de áudio e vídeo
+        GPIO de 40 pinos
+        Certificado de homologação Anatel: 01598-18-10629
+        Dimensões: 85 x 56 x 17mm
+
+![image](https://github.com/Ararabots-UFMS/Drone/assets/104502725/80f1692d-961d-4af0-9149-db91c370b296)
+
+
+# ESCs 
+
+  ## Current equipment : 20A OPTO PRO ESC
+        -Value: R$284,24 4 ESCs
+
+        -Specifications:
+          Output: Continuous 20A, (max  25A)
+          Input Voltage: 2-4S Lipo, 6-12 cells NiMH
+          BEC output: No
+          Firmware: BLHELI
+          Support Damped mode, Oneshot125\
+          Processor: SILABS F396,RUN 48MHZ
+          MOS type: ALL N FET,AOS COMPANY
+          Size: 25*14*4(L*W*H)
+          Weight: 6g
+  
+
+![image](https://github.com/Ararabots-UFMS/Drone/assets/104502725/56b9f15a-7217-48ee-9f77-bfc74daabaab)
+
+
+
+# Frame
+
+  ## Current equipment: F450
+        -Value: R$120,00
+
+        -Specifications:
+        Largura: 450 milímetros
+        Altura: 55 milímetros
+        Peso: 295g (sem a eletrônica)
+        Buracos Motor Montante parafusos: 16 / 19mm
+
+
+
+![image](https://github.com/Ararabots-UFMS/Drone/assets/104502725/365d088a-3c18-4dd2-ae53-4ffbd17979d8)
+
+
+
+# Ascelerometro e Giroscopip
+
+# Lidar
+
+# Helices
 
 
 
