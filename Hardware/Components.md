@@ -137,10 +137,10 @@
         -Value: R$120,00
 
         -Specifications:
-        Largura: 450 milímetros
-        Altura: 55 milímetros
-        Peso: 295g (sem a eletrônica)
-        Buracos Motor Montante parafusos: 16 / 19mm
+          Largura: 450 milímetros
+          Altura: 55 milímetros
+          Peso: 295g (sem a eletrônica)
+          Buracos Motor Montante parafusos: 16 / 19mm
 
 
 
@@ -148,9 +148,46 @@
 
 
 
-# Ascelerometro e Giroscopip
+# Acelerômetro e Giroscópio
+  ## Current equipment: Acelerômetro e Giroscópio MPU-6050
+        -Value: R$17,90 
+        
+        -Specifications
+          Tensão de operação: 3 a 5V
+          Protocolo de Comunicação: I2C
+          Range do acelerômetro: ±2, ±4, ±8, ±16g
+          Range do giroscópio: ±250, 500, 1000, 2000°/s
+          Dimensões: 20 x 16 x 1 mm
+      
+![image](https://github.com/Ararabots-UFMS/Drone/assets/104502725/1ea893e6-c088-4013-a052-df07e4297d9e)
+
 
 # Lidar
+   ## Current equipment: Sensor De Distância Laser Lidar Tfluna Tf-luna 8m Uart I2c
+         -Value: R$150,00 
+
+         -Specifications 
+            - Faixa de operação: 0,2 m ~ 8 m (90% de refletividade)
+            - Precisão: ± 6cm em (0,2 - 3 m) 2 | ± 2% em (3 - 8 m)
+            - Resolução de distância: 1 cm
+            - Taxa de quadros: 1-250 Hz 3
+            - Imunidade à luz ambiente: 70 Klux
+            - Temperatura de operação: -10 ~ 60 ° C
+            - Fonte de luz: VCSEL
+            - Comprimento de onda central: 850 nm
+            - Segurança fotobiológica: Classe 1 (IEC60825)
+            - FOV: 2 ° 4
+            - Tensão de alimentação: 3,7 - 5,2 V
+            - Corrente média: 70 mA
+            - Consumo de energia: 0,35 W
+            - Corrente de pico: 150 mA
+            - Nível de comunicação: LVTTL (3,3V)
+            - Interface de comunicação: UART / I2C
+            - Carcaça: ABS + PC
+            - Temperatura de armazenamento: -20 ~ 75 ° C
+            - Peso: 5g
+
+![image](https://github.com/Ararabots-UFMS/Drone/assets/104502725/7cea0136-d7a9-409e-a716-7ea590ec69eb)
 
 # Helices
 
