@@ -90,6 +90,10 @@ MicroXRCEAgent udp4 -p 8888
 
 O Gazebo já é instalado durante a instalação do PX4
 
+![image](https://github.com/Ararabots-UFMS/Drone/assets/104502725/d8bca06f-23c8-47ae-ac94-8f1bd5f11626)
+Compatibilidade entre gazebo e ros
+
+ 
 ## QGroundControl
 
 Seguindo o tutorial de instalação no site oficial do programa.
