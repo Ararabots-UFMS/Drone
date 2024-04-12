@@ -16,4 +16,4 @@ Conhecimentos: C, C++, Python, PX4, ROS
 		https://docs.qgroundcontrol.com/master/en/qgc-user-guide/
 		https://camera-manager.dronecode.org/en/
 		https://ardupilot.org/ardupilot/
-  		https://clover.coex.tech/en/
+  		https://clover.coex.tech/en/       ---     https://coex.tech/education
