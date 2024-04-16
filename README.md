@@ -1,13 +1,12 @@
 # Drone
 
-## Projeto de um Drone Autonomo
+## Autonomous Drone Project
 
-Baseado PX4 source flight controller firmware. 
-Utilizando ambiente simulado (Gazebo) o projeto implementa e integra os modulos sobre mapeamento, localizacao, planejameneto, controle e deteccao.
+Based on PX4 source flight controller firmware. Utilizing a simulated environment (Gazebo), the project implements and integrates modules for mapping, localization, planning, control, and detection.
 
-Conhecimentos: C, C++, Python, PX4, ROS
+Skills: C, C++, Python, PX4, ROS
 
-	Necessarios:
+	Essential Requirements:
 		https://px4.io/
 		https://www.ros.org/
 		http://qgroundcontrol.com/
