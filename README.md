@@ -16,3 +16,4 @@ Skills: C, C++, Python, PX4, ROS
 		https://camera-manager.dronecode.org/en/
 		https://ardupilot.org/ardupilot/
   		https://clover.coex.tech/en/       ---     https://coex.tech/education
+		https://www.ecalc.ch/xcoptercalc_mobile.php
