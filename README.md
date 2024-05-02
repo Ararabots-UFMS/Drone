@@ -18,3 +18,4 @@ Skills: C, C++, Python, PX4, ROS
   		https://clover.coex.tech/en/       ---     https://coex.tech/education
 		https://www.ecalc.ch/xcoptercalc_mobile.php
 		http://www.librepilot.org/site/index.html
+		https://ieeexplore.ieee.org/Xplore/home.jsp
