@@ -32,7 +32,7 @@ make px4_sitl gz_x500
 Execute this command on another termnal:
 
 ```bash
-MicroXRCEAgente udp4 -p 8888
+MicroXRCEAgent udp4 -p 8888
 ```
 
 And run the drone control on the last terminal:
