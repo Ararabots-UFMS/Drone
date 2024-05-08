@@ -10,6 +10,7 @@ Programas a serem instalados:
 - BetaFlight
 - PX4
 - Visual Studio Code
+- Colcon
 
 ## ROS2
 
@@ -136,4 +137,16 @@ E instale com o seguinte comando:
 
 ```shell
 sudo apt install ./<file>.deb
+```
+## Colcon
+
+O colcon é a ferramenta utilizada para build dos workspaces do ROS2, para instalar basta executar os seguintes comandos:
+
+```bash
+sudo sh -c 'echo "deb [arch=amd64,arm64] http://repo.ros2.org/ubuntu/main `lsb_release -cs` main" > /etc/apt/sources.list.d/ros2-latest.list'
+
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+
+sudo apt update
+sudo apt install python3-colcon-common-extensions
 ```
