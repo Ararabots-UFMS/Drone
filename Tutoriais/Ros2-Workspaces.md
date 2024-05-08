@@ -18,7 +18,7 @@ Também é possível fazer o source de um "overlay", ou seja, sobrepor o workspa
 
 Dessa forma, é possível adicionar novos pacotes sem interferir com o workspace existente do ROS2 ("underlay"). O underlay deve conter todas as dependencias dos pacotes no overlay. Ao fazer source de um overlay, os pacotes presentes nele sobrescrevem os do underlay caso possuam a mesma definição. Também é possíovel ter diversas camadas de overlays e underlays, sendo que cada novo overlay contém os pacotes dos seus underlays.
 
-![overlay-underlay](https://github.com/Ararabots-UFMS/Drone/tree/main/Tutoriais/images/overlay-underlay.png)
+![overlay-underlay](https://github.com/Ararabots-UFMS/Drone/blob/main/Tutoriais/images/overlay-underlay.png)
 
 Na imagem acima o ROS2 é o underlay, e podemos fazer source do pacote "controle_voo" ou do "sensor_lidar" e utilizá-los em terminais diferentes sem algum problema, ou até mesmo no mesmo terminal. 
 
