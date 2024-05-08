@@ -1,3 +1,9 @@
 [submodule "Examples/ws_drone_control/src/px4_msgs"]
 	path = Examples/ws_drone_control/src/px4_msgs
 	url = https://github.com/PX4/px4_msgs.git
+[submodule "FlightCodes/Examples/ws_drone_control/FlightCodes/Examples/ws_drone_control/src/px4_msgs"]
+	path = FlightCodes/Examples/ws_drone_control/FlightCodes/Examples/ws_drone_control/src/px4_msgs
+	url = https://github.com/PX4/px4_msgs.git
+[submodule "FlightCodes/Examples/ws_drone_control/src/px4_msgs"]
+	path = FlightCodes/Examples/ws_drone_control/src/px4_msgs
+	url = https://github.com/PX4/px4_msgs.git
