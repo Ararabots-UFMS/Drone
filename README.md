@@ -26,7 +26,7 @@ Baseado no PX4 source flight controller firmware. Utiliza ambientes simulados co
 Um livro muito completo em geral. Ele fornece uma visão geral detalhada de todos os tópicos relacionados a quadricópteros, desde o design do chassi até eletrônicos e controle, mergulhando profundamente em práticas e considerações técnicas e práticas de design. Ele fornece intuição por trás de cada assunto e não contém ambiguidades. A matemática pode parecer muito difícil para algumas pessoas lidarem, mas isso não é motivo de preocupação. Uma pessoa sem formação em engenharia mecânica ou elétrica pode facilmente lidar com isso com algum conhecimento de cálculo e geometria básica.
 
 
-## Você não pode absorver tudo de uma vez
+## Você não vai absorver tudo de uma vez
 
 Faça pausas, anote possíveis coisas que você precisa revisar e assista-as depois ou de uma maneira diferente. Isso é muito para absorver e pausas são obrigatórias.
 
@@ -38,7 +38,7 @@ Existem muitas distrações que podem consumir tempo valioso. Foco e concentraç
 
 Aprenda a programar. Isso é necessário para entender como os diferentes algoritmos e técnicas que serão apresentados são realmente implementados. Você precisa desse conhecimento para poder entender o código-fonte das implementações populares de estruturas de dados, controladores de voo de código aberto e muito mais. Estruturas de dados básicas e complexidade algorítmica devem ser incluídas.
 
-- [ ] **C, C++, Python, Qualquer coisa**
+- [ ] **C, C++, Python, ROS**
     - Informações disponíveis na internet são amplamente acessíveis e você pode encontrar muitas coisas pesquisando.
     - Posso recomendar começar com Python e progredir para C e C++.
     - Você pode aprender a programar em paralelo com este plano de estudos, mas as coisas serão muito mais difíceis e levarão mais tempo.
