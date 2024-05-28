@@ -8,6 +8,14 @@
 - Gazebo
 - Colcon
 
+## Cloning the repository
+
+In this workspace there is a git submodule, to clone it to your machine use:
+
+```bash
+git pull --recurse-submodules
+```
+
 ## How to Build
 
 To build a ros2 workspace we use the  colcon build tool ([how to install](https://github.com/Ararabots-UFMS/Drone/blob/main/Tutoriais/SETUP.md)), executing the command:

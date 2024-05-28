@@ -13,7 +13,7 @@
 In this workspace there is a git submodule, to clone it to your machine use:
 
 ```bash
-git pull --recursive
+git pull --recurse-submodules
 ```
 
 ## How to install ros-gz bridge
