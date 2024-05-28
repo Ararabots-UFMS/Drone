@@ -51,14 +51,17 @@ No terminal 1 serão enviadas mensagens que devem aparecer no terminal 2.
 
 ## PX4
 
-Também precisamos instalar o PX4 para rodar simulações junto ao Gazebo.
+Também precisamos instalar o PX4 (do fork Drone-PX4) para rodar simulações junto ao Gazebo.
 Para instalar, utilize os seguintes comandos:
 
 ```shell
 cd
-git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+mkdir PX40Autopilot
+git clone https://github.com/Ararabots-UFMS/Drone-PX4.git ./PX4-Autopilot --recursive --recurse-submodules=
 bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
 cd PX4-Autopilot/
+git fetch upstream
+git fetch upstream --tags
 make px4_sitl
 ```
 
