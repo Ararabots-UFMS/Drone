@@ -68,4 +68,3 @@ Run "commander takeoff" on the PX4-Autopilot terminal.
 The drone will takeoff and start recognizing the QRCodes, on the camera view window it will mark the currently focused QRCode and show its value, after some time its going to focus on the other one.
 
 On the terminal its going to show the direction of the QRCode in relation to the drone position.
-
