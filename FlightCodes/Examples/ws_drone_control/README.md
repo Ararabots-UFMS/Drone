@@ -3,7 +3,7 @@
 ## Requirements
 
 - PX4-Autopilot
-- Micro-XRCE-DDS-Agente (Communication between px4 and ros2)
+- Micro-XRCE-DDS-Agent (Communication between px4 and ros2)
 - ROS2
 - Gazebo
 - Colcon
@@ -32,7 +32,7 @@ make px4_sitl gz_x500
 Execute this command on another termnal:
 
 ```bash
-MicroXRCEAgente udp4 -p 8888
+MicroXRCEAgent udp4 -p 8888
 ```
 
 And run the drone control on the last terminal:
