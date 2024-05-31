@@ -17,6 +17,11 @@
 
 # Youtube 
 
+Canal - Articulated Robotics
+Diversos vídeos sobre funcionamento do ROS e sobre algumas questões matemáticas envolvidas na movimentação dos Robôs
+Recomendo assistir todos os videos.
+https://www.youtube.com/@ArticulatedRobotics
+
 Teaching computer vision, OpenCV, Python, and a bit of robotics
 https://www.youtube.com/aiphile
 
