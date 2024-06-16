@@ -1,6 +1,6 @@
 # Configuração do Ambiente de Desenvolvimento
 
-Essa configuração é feita considerando o sistema operacional Ubuntu, visto que alguns do programas não possuem versão para Windows e Mac.
+Essa configuração é feita considerando o sistema operacional Ubuntu 22.04.4 LTS, visto que alguns do programas não possuem versão para Windows e Mac.
 
 Programas a serem instalados:
 
