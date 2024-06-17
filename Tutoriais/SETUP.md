@@ -60,6 +60,7 @@ mkdir PX4-Autopilot
 git clone https://github.com/Ararabots-UFMS/Drone-PX4.git ./PX4-Autopilot --recursive --recurse-submodules=
 bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
 cd PX4-Autopilot/
+git remote add upstream https://github.com/Ararabots-UFMS/Drone-PX4.git
 git fetch upstream
 git fetch upstream --tags
 make px4_sitl
