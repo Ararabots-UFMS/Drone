@@ -56,7 +56,7 @@ Para instalar, utilize os seguintes comandos:
 
 ```shell
 cd
-mkdir PX4Autopilot
+mkdir PX4-Autopilot
 git clone https://github.com/Ararabots-UFMS/Drone-PX4.git ./PX4-Autopilot --recursive --recurse-submodules=
 bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
 cd PX4-Autopilot/
