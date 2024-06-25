@@ -16,6 +16,7 @@ from pyzbar.pyzbar import decode
 class CameraSubscriber(Node):
     def __init__(self):
         super().__init__('camera_subscriber')
+               
         self.br = CvBridge();
         self.currentTarget = ""
         self.landed = []
@@ -88,23 +89,10 @@ class CameraSubscriber(Node):
                         
                         self.get_logger().info('QrCode data: {}'.format(qr_data))
                         
-                        if abs(droneViewMiddleX - rectMiddleX) < 10 and abs(droneViewMiddleY - rectMiddleY) < 10:
-                            self.get_logger().info('Landed on QR Code')
-                            self.landed.append(qr_data)
-                            self.currentTarget = ""
-                            self.direction = [0, 0]
-                            
-                        else:
-                            if rectMiddleX < droneViewMiddleX:
-                                self.direction[0] = 1
-                            elif rectMiddleX > droneViewMiddleX:
-                                self.direction[0] = -1
-                                
-                            if rectMiddleY < droneViewMiddleY:
-                                self.direction[1] = 1
-                            elif rectMiddleY > droneViewMiddleY:
-                                self.direction[1] = -1
-                        
+                        self.direction = [rectMiddleX - droneViewMiddleX, rectMiddleY - droneViewMiddleY]
+
+        elif self.currentTarget == "":
+            self.direction = []      
                     
         cv2.circle(image, (droneViewMiddleX, droneViewMiddleY), 5, (0, 0, 255), -1)
         cv2.imshow("Drone Camera", image)
