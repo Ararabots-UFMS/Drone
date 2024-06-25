@@ -30,7 +30,7 @@ To build a ros2 workspace we use the  colcon build tool ([how to install](https:
 
 ```bash
 source /opt/ros/humble/setup.bash
-cd ws_drone_control/
+cd ws_drone_camera/
 colcon build
 ```
 
