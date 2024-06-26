@@ -1,6 +1,0 @@
-[submodule "FlightCodes/Examples/ws_drone_control/src/px4_msgs"]
-	path = FlightCodes/Examples/ws_drone_control/src/px4_msgs
-	url = https://github.com/PX4/px4_msgs.git
-[submodule "FlightCodes/Examples/ws_drone_camera/src/vision_opencv"]
-	path = FlightCodes/Examples/ws_drone_camera/src/vision_opencv
-	url = https://github.com/ros-perception/vision_opencv/tree/humble
