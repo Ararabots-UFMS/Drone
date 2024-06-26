@@ -8,6 +8,7 @@
 - Gazebo
 - Colcon
 - ROS2 - Gazebo Bridge
+- PyzBar
 
 ## Cloning the repository
 
@@ -25,12 +26,21 @@ This ROS2 package is used to translate Gazebo Topics to ROS2 Topics. Install exe
 sudo apt-get install ros-humble-ros-gzgarden
 ```
 
+## Install Python PyzBar Module
+
+```bash
+pip install pyzbar
+```
+
 ## How to Build
 
-To build a ros2 workspace we use the  colcon build tool ([how to install](https://github.com/Ararabots-UFMS/Drone/blob/main/Tutoriais/SETUP.md)), executing the command:
+**First, since this package requires the vision_opencv and px4_msgs packages, you need to build and source it before building this package. To do this, go to ws_common_packages workspace and follow its build instructions. Then come back here and continue with the build step.**
+
+To build a ros2 workspace we use the  colcon build tool ([how to install](https://github.com/Ararabots-UFMS/Drone/blob/main/Tutoriais/SETUP.md)):
 
 ```bash
 source /opt/ros/humble/setup.bash
+source ../ws_common_packages/install/setup.bash
 cd ws_drone_camera/
 colcon build
 ```
