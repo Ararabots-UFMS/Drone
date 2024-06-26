@@ -1,0 +1,6 @@
+[submodule "px4_msgs"]
+	path = FlightCodes/Examples/ws_common_packages/src/px4_msgs
+	url = https://github.com/PX4/px4_msgs.git
+[submodule "vision_opencv"]
+	path = FlightCodes/Examples/ws_common_packages/src/vision_opencv
+	url = https://github.com/ros-perception/vision_opencv.git
