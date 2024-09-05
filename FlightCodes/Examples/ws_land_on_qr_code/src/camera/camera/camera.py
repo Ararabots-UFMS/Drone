@@ -3,15 +3,14 @@
 # pip install pyzbar
 # pip install setuptools==58.2.0
 
+import cv2
 import rclpy
+from cv_bridge import CvBridge
+from pyzbar.pyzbar import decode
 from rclpy.node import Node
-
 from sensor_msgs.msg import Image
 from std_msgs.msg import Int16MultiArray
-from cv_bridge import CvBridge
-import cv2
 
-from pyzbar.pyzbar import decode
 
 class CameraSubscriber(Node):
     def __init__(self):

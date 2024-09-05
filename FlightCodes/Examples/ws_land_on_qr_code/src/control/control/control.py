@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 
 import rclpy
+from px4_msgs.msg import (OffboardControlMode, TrajectorySetpoint,
+                          VehicleCommand, VehicleLocalPosition, VehicleStatus)
 from rclpy.node import Node
-from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
-from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus
-from std_msgs.msg import Int16MultiArray
+from rclpy.qos import (DurabilityPolicy, HistoryPolicy, QoSProfile,
+                       ReliabilityPolicy)
+from std_msgs.msg import Float64MultiArray
 
 
 class OffboardControl(Node):
@@ -35,9 +37,9 @@ class OffboardControl(Node):
         self.vehicle_status_subscriber = self.create_subscription(
             VehicleStatus, '/fmu/out/vehicle_status', self.vehicle_status_callback, qos_profile)
         
-        # Create subscribers for camera estimated qrcode direction
-        self.qrcode_direction_subscriber = self.create_subscription(
-            Int16MultiArray, '/direction', self.qrcode_direction_callback, 10)
+        # Create subscribers for camera estimated qrcode position
+        self.qrcode_position_subscriber = self.create_subscription(
+            Float64MultiArray, '/position', self.qrcode_position_callback, 10)
         
 
         # Initialize variables
@@ -45,8 +47,8 @@ class OffboardControl(Node):
         self.offboard_takeoff_counter = 0
         self.vehicle_local_position = VehicleLocalPosition()
         self.vehicle_status = VehicleStatus()
-        self.takeoff_height = -2.5
-        self.direction = []
+        self.takeoff_height = -4.5
+        self.position = []
         self.time_landed = 0
         self.timer_interval = 0.5
         self.takeoff_pos = [0.0, 0.0, self.takeoff_height]
@@ -55,9 +57,9 @@ class OffboardControl(Node):
         # Create a timer to publish control commands
         self.timer = self.create_timer(self.timer_interval, self.timer_callback)
         
-    def qrcode_direction_callback(self, data):
-        self.direction = data.data
-        print(f"Received direction: {self.direction}")
+    def qrcode_position_callback(self, data):
+        self.position = data.data
+        print(f"Received position: {self.position}")
 
     def vehicle_local_position_callback(self, vehicle_local_position):
         """Callback function for vehicle_local_position topic subscriber."""
@@ -160,23 +162,20 @@ class OffboardControl(Node):
                 self.offboard_takeoff_counter += 1
                 self.get_logger().info(f"Takeoff counter: {self.offboard_takeoff_counter}")
                 self.publish_velocity_setpoint(0.0, 0.0, -1.0, True)
-            else:
-                self.publish_velocity_setpoint(0.0, 0.0, -1.0, False)
 
         #Se o drone estiver em modo offboard e a altura for maior que a altura de decolagem, sobrevoa o qrcode
         elif self.vehicle_local_position.z <= (self.takeoff_height + 1) and self.vehicle_status.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
-            print(f"Acima de takeoff_height, direction é {self.direction}")
-            if len(self.direction) > 0:
-                if self.direction[0] != 0 and self.direction[1] != 0:
+            print(f"Acima de takeoff_height, position é {self.position}")
+            if len(self.position) > 0:
                     
-                    pixelDistanceX = float(self.direction[0])
-                    pixelDistanceY = float(self.direction[1])
+                self.publish_position_setpoint(self.position[0], self.position[1], self.takeoff_height, True)
+
                     
-                    self.velocity[0] = -1.0
-                    self.velocity[1] = -1.0
-                    self.velocity[2] = 0.0
+                    # self.velocity[0] = -1.0
+                    # self.velocity[1] = -1.0
+                    # self.velocity[2] = 0.0
                     
-                    self.publish_velocity_setpoint(self.velocity[0], self.velocity[1], self.velocity[2], True)
+                    # self.publish_velocity_setpoint(self.velocity[0], self.velocity[1], self.velocity[2], True)
                 # else:
                 #     self.velocity[0] = 0.0
                 #     self.velocity[1] = 0.0
@@ -197,7 +196,7 @@ class OffboardControl(Node):
             self.time_landed = 0
             self.offboard_setpoint_counter = 0
             self.offboard_takeoff_counter = 0
-            self.direction = []
+            self.position = []
             self.takeoff_pos = [0.0, 0.0, self.takeoff_height]
 
             
