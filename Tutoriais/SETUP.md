@@ -2,7 +2,7 @@
 
 Essa configuração é feita considerando o sistema operacional Ubuntu 22.04.4 LTS, visto que alguns do programas não possuem versão para Windows e Mac.
 
-Programas a serem instalados:
+Programas a serem instalados:home/luizg/PX4-Autopilot/msg/VehicleTrajectoryBezier.msg /home/luizg/PX4-Autopilot/msg/VehicleTrajectoryWaypoint.msg /home/luizg/PX4-Autopilot/msg/VelocityLimits.msg /home/luizg/PX4-Autopilot/msg/VtolVehicleStatus.msg /home/luizg/PX4-Autopilot/msg/WheelEncoders.msg /home/luizg/PX4-Autopilot/msg/Wind.msg /home/luizg/PX4-Autopilot/msg/YawEstimatorStatus.msg -i /home/luizg/PX4-Autopi
 
 - Gazebo
 - ROS2
@@ -50,6 +50,8 @@ ros2 run demo_nodes_py listener
 No terminal 1 serão enviadas mensagens que devem aparecer no terminal 2.
 
 ## PX4
+
+**A PASTA DO PX4 TEM QUE ESTAR NA HOME**
 
 Também precisamos instalar o PX4 (do fork Drone-PX4) para rodar simulações junto ao Gazebo.
 Para instalar, utilize os seguintes comandos:
