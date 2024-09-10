@@ -67,6 +67,7 @@ And run the drone control on the last terminal:
 ```bash
 source /opt/ros/humble/setup.bash
 cd ws_drone_camera/
+source ../ws_common_packages/install/setup.bash
 source install/setup.bash
 ros2 run drone_camera_py drone_camera_py
 ```
