@@ -32,6 +32,14 @@ sudo apt-get install ros-humble-ros-gzgarden
 pip install pyzbar
 ```
 
+## Downgrade numpy version
+
+We need to use numpy < 2.0 because some packages was compiled with it and it throws errors if not on the correct version:
+
+```bash
+pip install numpy==1.26.4
+```
+
 ## How to Build
 
 **First, since this package requires the vision_opencv and px4_msgs packages, you need to build and source it before building this package. To do this, go to ws_common_packages workspace and follow its build instructions. Then come back here and continue with the build step.**
